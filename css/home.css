@@ -21,14 +21,28 @@
   fill: currentColor;
 }
 
-.menu-item{
-    cursor: pointer;
+.nav__logo-wrapper{
+    width: 52px;
+    height: 52px;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.nav__menu{
-    list-style-type: none;
+.nav__logo-wrapper:hover{
+    background-color:rgb(29, 155, 240, 0.1);
+    border-radius: 9999px;
+    cursor: pointer;
+}
+
+.menu-item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.nav__menu {
+  list-style-type: none;
 }
 
 .menu-item__icon {
@@ -36,23 +50,23 @@
   height: 1.75rem;
 }
 
-.menu-item__link{
-    margin: 0 20px 0 16px;
-    text-decoration: none;
-    color: rgb(15, 20, 25);
-    font-size: 20px;
-    vertical-align: middle;
+.menu-item__link {
+  margin: 0 20px 0 16px;
+  text-decoration: none;
+  color: rgb(15, 20, 25);
+  font-size: 20px;
+  vertical-align: middle;
 }
 
-.menu-item__link--active{
-    font-weight: bold;
+.menu-item__link--active {
+  font-weight: bold;
 }
 
-.menu-item__wrapper{
-    padding: 12px;
+.menu-item__wrapper {
+  padding: 12px;
 }
 
-.menu-item__wrapper:hover{
-    background-color: #0F14191A;
-    border-radius: 9999px;
+.menu-item__wrapper:hover {
+  background-color: #0f14191a;
+  border-radius: 9999px;
 }
