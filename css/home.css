@@ -3,7 +3,7 @@
 }
 
 .page__nav {
-  /* background-color: yellow; */
+  padding-top: 1px;
 }
 
 .page__main {
@@ -14,20 +14,20 @@
   background-color: blue;
 }
 
-.nav{
-    display: flex;
-    justify-content: flex-end;
-    width: 500px;
-    height: 100vh;
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  height: 100vh;
 }
 
-.nav__content-wrapper{
-    width: 275px;
-    padding: 0 12px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.nav__content-wrapper {
+  width: 275px;
+  padding: 0 12px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
 }
 
 .nav__logo {
@@ -37,18 +37,18 @@
   fill: currentColor;
 }
 
-.nav__logo-wrapper{
-    width: 52px;
-    height: 52px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.nav__logo-wrapper {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.nav__logo-wrapper:hover{
-    background-color:rgb(29, 155, 240, 0.1);
-    border-radius: 9999px;
-    cursor: pointer;
+.nav__logo-wrapper:hover {
+  background-color: rgb(29, 155, 240, 0.1);
+  border-radius: 9999px;
+  cursor: pointer;
 }
 
 .menu-item {
@@ -64,6 +64,10 @@
 .menu-item__icon {
   width: 1.75rem;
   height: 1.75rem;
+}
+
+#search-icon{
+    display: none;
 }
 
 .menu-item__link {
@@ -88,80 +92,130 @@
 }
 
 .button {
-    background-color: lightgray;
-    border: 1px solid transparent;
-    border: none;
-    outline: none;
-    padding: 0 16px;
-    font-size: 15px;
-    border-radius: 9999px;
-    font-weight: 600;
-    line-height: 20px;
-    min-height: 36px
+  background-color: lightgray;
+  border: 1px solid transparent;
+  border: none;
+  outline: none;
+  padding: 0 16px;
+  font-size: 15px;
+  border-radius: 9999px;
+  font-weight: 600;
+  line-height: 20px;
+  min-height: 36px;
 }
 
-.button--primary{
-    background-color:rgb(29, 155, 240);
-    color: white;
+.button--primary {
+  background-color: rgb(29, 155, 240);
+  color: white;
 }
 
-.nav__tweet{
-    width: 90%;
-    min-height: 52px;
-    margin: 4px 0;
-    font-size: 17px;
+.nav__tweet {
+  width: 90%;
+  min-height: 52px;
+  margin: 4px 0;
+  font-size: 17px;
 }
 
-.user{
-    padding: 12px;
-    display: grid;
-    grid-template-areas: 
+.user {
+  padding: 12px;
+  display: grid;
+  grid-template-areas:
     "image name options"
     "image handle options";
-    column-gap: 12px;
+  column-gap: 12px;
 }
 
-.nav__user{
-    margin: 12px 0;
+.nav__user {
+  margin: 12px 0;
 }
 
-.user:hover{
-    background-color: #909ca81a;
-    border-radius: 9999px;
-    cursor: pointer;
+.user:hover {
+  background-color: #909ca81a;
+  border-radius: 9999px;
+  cursor: pointer;
 }
 
-.user__image{
-    grid-area: image;
-    width: 38px;
-    align-self: center;
+.user__image {
+  grid-area: image;
+  width: 38px;
+  align-self: center;
 }
 
-.user__image > img{
-    width: 38px;
-    height: 38px;
-    border-radius: 100%;
+.user__image > img {
+  width: 38px;
+  height: 38px;
+  border-radius: 100%;
 }
 
-.user__name{
-    font-weight: bold;
-    grid-area: name;
-    font-size: 15px;
-    white-space: nowrap;
-    max-width: calc(100% - 38px - 24px);
-    overflow: hidden;
+.user__name {
+  font-weight: bold;
+  grid-area: name;
+  font-size: 15px;
+  white-space: nowrap;
+  max-width: calc(100% - 38px - 24px);
+  overflow: hidden;
 }
 
-.user__handle{
-    grid-area: handle;
-    font-size: 15px;
-    color: rgb(83, 100, 113);
+.user__handle {
+  grid-area: handle;
+  font-size: 15px;
+  color: rgb(83, 100, 113);
 }
 
-.user__options{
-    grid-area: options;
-    justify-self: end;
-    align-self: center;
+.user__options {
+  grid-area: options;
+  justify-self: end;
+  align-self: center;
+  width: 24px;
+  fill: rgb(15, 20, 25);
+}
+
+.nav__tweet-icon{
+    display: none;
     width: 24px;
-    fill: rgb(15, 20, 25);
+    height: 24px;
+    fill: white;
+}
+
+@media all and (max-width: 1019px) {
+  .menu-item__link {
+    display: none;
+  }
+
+  .nav__tweet > span {
+      display: none;
+  }
+
+  .nav__tweet{
+      width: 50px;
+      height: 50px;
+  }
+
+  .nav__tweet-icon{
+      display: block;
+  }
+
+  .user > *:not(.user__image){
+      display: none;
+  }
+
+  .nav__content-wrapper{
+      width: 74px;
+  }
+
+  .user{
+      padding: 0;
+      column-gap: 0;
+      grid-template-areas: "image";
+      justify-content: center;
+  }
+
+  #search-icon{
+      display: block;
+  }
+
+  #explore-icon{
+      display: none;
+  }
+
 }
