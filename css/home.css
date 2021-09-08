@@ -72,7 +72,7 @@
 }
 
 .menu-item__wrapper:hover {
-  background-color: #0f14191a;
+  background-color: #909ca81a;
   border-radius: 9999px;
 }
 
@@ -102,5 +102,55 @@
 }
 
 .user{
+    padding: 12px;
     display: grid;
+    grid-template-areas: 
+    "image name options"
+    "image handle options";
+    column-gap: 12px;
+}
+
+.nav__user{
+    margin: 12px 0;
+}
+
+.user:hover{
+    background-color: #909ca81a;
+    border-radius: 9999px;
+    cursor: pointer;
+}
+
+.user__image{
+    grid-area: image;
+    width: 38px;
+    align-self: center;
+}
+
+.user__image > img{
+    width: 38px;
+    height: 38px;
+    border-radius: 100%;
+}
+
+.user__name{
+    font-weight: bold;
+    grid-area: name;
+    font-size: 15px;
+    white-space: nowrap;
+    max-width: calc(100% - 38px - 24px);
+    overflow: hidden;
+}
+
+.user__handle{
+    grid-area: handle;
+    font-size: 15px;
+    color: rgb(83, 100, 113);
+}
+
+.user__options{
+    grid-area: options;
+    justify-self: end;
+    align-self: center;
+    width: 24px;
+    fill: rgb(15, 20, 25);
 }
