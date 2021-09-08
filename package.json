@@ -6,7 +6,7 @@
   "license": "MIT",
   "author": "Ranjith Suranga <suranga@ijse.lk> (ijse.lk)",
   "scripts": {
-    "clear": "rm -rf docs",
+    "clean": "rm -rf docs",
     "build": "parcel build index.html 404.html --out-dir docs --public-url /twitter-clone/",
     "dev": "parcel index.html --open",
     "start": "npm run build && npm run dev"
